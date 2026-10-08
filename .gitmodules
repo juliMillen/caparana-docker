@@ -1,0 +1,6 @@
+[submodule "caparana-back"]
+	path = caparana-back
+	url = https://github.com/juliMillen/caparana-back.git
+[submodule "front-caparana"]
+	path = front-caparana
+	url = https://github.com/juliMillen/front-caparana.git
