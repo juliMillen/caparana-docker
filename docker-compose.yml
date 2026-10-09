@@ -15,13 +15,14 @@ services:
 
   back:
     build: ./caparana-back
+    env_file:
+      - .env
     depends_on:
       db:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${DB_NAME}
-      SPRING_DATASOURCE_USERNAME: ${DB_USER}
-      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      DB_URL: jdbc:postgresql://db:5432/${DB_NAME}
+      DB_USERNAME: ${DB_USER}
     ports:
       - "8080:8080"
 
